@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: greeting-service
+  config:
+    import: "optional:configserver:"
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+        - '*'
+
+greeting-service:
+  greeting: "ola"
+  default-value: "mundo"
